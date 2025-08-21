@@ -83,7 +83,7 @@ export default function LoginForm({ adminSettings }: LoginFormProps) {
         <CardHeader className="text-center">
           <CardTitle className="text-2xl font-bold">Welcome Back</CardTitle>
           <CardDescription>
-            Sign in to your NextGeag BP account
+            Sign in to your Utility Choice Program account
           </CardDescription>
         </CardHeader>
         <CardContent>

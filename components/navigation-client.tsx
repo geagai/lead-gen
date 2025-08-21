@@ -22,7 +22,7 @@ interface NavigationClientProps {
   siteName?: string
 }
 
-export default function NavigationClient({ user, adminSettings, sticky = true, siteName = 'NextGeag BP' }: NavigationClientProps) {
+export default function NavigationClient({ user, adminSettings, sticky = true, siteName = 'Utility Choice Program' }: NavigationClientProps) {
   const [isOpen, setIsOpen] = useState(false)
   const { theme } = useTheme()
 

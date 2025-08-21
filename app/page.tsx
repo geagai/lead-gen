@@ -4,18 +4,18 @@ import { Button } from '@/components/ui/button'
 import { Phone, Mail, Clock, Shield, Zap, Users, TrendingUp, Star, CheckCircle, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Utility Choice Program - Find Your Best Energy Rate & Plan',
-  description: 'We\'ll help you find the best energy rate & plan that fits your needs. Serving your local area with professional energy consultations and 24/7 support.',
+  title: 'Utility Choice Program - Energy Solutions for Residential and Business Needs',
+  description: 'Professional energy solutions for residential and business needs. Find competitive rates, reliable service, and expert consultations for all your energy requirements.',
   keywords: 'energy rates, electricity plans, utility choice, energy savings, residential energy, business energy',
   openGraph: {
-    title: 'Utility Choice Program - Find Your Best Energy Rate & Plan',
-    description: 'We\'ll help you find the best energy rate & plan that fits your needs. Serving your local area with professional energy consultations and 24/7 support.',
+    title: 'Utility Choice Program - Energy Solutions for Residential and Business Needs',
+    description: 'Professional energy solutions for residential and business needs. Find competitive rates, reliable service, and expert consultations for all your energy requirements.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Utility Choice Program - Find Your Best Energy Rate & Plan',
-    description: 'We\'ll help you find the best energy rate & plan that fits your needs.',
+    title: 'Utility Choice Program - Energy Solutions for Residential and Business Needs',
+    description: 'Professional energy solutions for residential and business needs.',
   },
 }
 

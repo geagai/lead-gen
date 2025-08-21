@@ -22,7 +22,7 @@ export function DashboardHeader({ user }: DashboardHeaderProps) {
       <div>
         <h1 className="text-3xl font-bold">Welcome back, {user.name || 'User'}!</h1>
         <p className="text-muted-foreground mt-2">
-          Here&apos;s what&apos;s happening with your NextGeag BP account today.
+          Here&apos;s what&apos;s happening with your Utility Choice Program account today.
         </p>
       </div>
 

@@ -169,7 +169,7 @@ export function IPLookupTool() {
           <h4 className="font-medium mb-2">About this Tool</h4>
           <p className="text-sm text-muted-foreground">
             This IP lookup tool demonstrates the MCP (Model Context Protocol) server integration. 
-            It shows how external APIs can be integrated into your NextGeag BP application for enhanced functionality.
+            It shows how external APIs can be integrated into your Utility Choice Program application for enhanced functionality.
           </p>
         </div>
       </CardContent>

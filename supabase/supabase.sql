@@ -1,4 +1,4 @@
--- Supabase SQL Setup Script for NextGeag BP
+-- Supabase SQL Setup Script for Utility Choice Program
 -- This script creates all required tables, RLS policies, functions, and triggers.
 -- Run this in the SQL editor of your new Supabase project.
 

@@ -56,7 +56,7 @@ export default async function RootLayout({
   let sessionData = null;
   let showHeader = true;
   let stickyHeader = true;
-  let siteName = 'NextGeag BP';
+  let siteName = 'Utility Choice Program';
   let footerBgLight = '#F7F9FB';
   let footerTextLight = '#33363B';
   let footerLinkLight = '#3A72BB';
@@ -97,7 +97,7 @@ export default async function RootLayout({
       settings = dbSettings.data;
       showHeader = settings?.show_header ?? true;
       stickyHeader = settings?.sticky_header ?? true;
-      siteName = settings?.site_name ?? 'NextGeag BP';
+      siteName = settings?.site_name ?? 'Utility Choice Program';
       footerBgLight = settings?.footer_background_color ?? '#F7F9FB';
       footerTextLight = settings?.footer_text_color ?? '#33363B';
       footerLinkLight = settings?.footer_link_color ?? '#3A72BB';

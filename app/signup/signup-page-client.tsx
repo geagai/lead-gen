@@ -86,7 +86,7 @@ export default function SignupPageClient({ adminSettings }: SignupPageClientProp
         <CardHeader className="text-center">
           <CardTitle className="text-2xl font-bold">Create Account</CardTitle>
           <CardDescription>
-            Join NextGeag BP and start building amazing apps
+            Join Utility Choice Program and start building amazing apps
           </CardDescription>
         </CardHeader>
         <CardContent>
