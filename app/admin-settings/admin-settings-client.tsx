@@ -66,7 +66,7 @@ interface AdminSettingsRow {
   site_name: string | null
   footer_html_one: string | null
   footer_html_two: string | null
-  repo: string | null
+
 }
 
 interface AdminSettingsClientProps {
@@ -215,7 +215,7 @@ export function AdminSettingsClient({ initialSettings }: AdminSettingsClientProp
         site_name: settings.site_name,
         footer_html_one: settings.footer_html_one,
         footer_html_two: settings.footer_html_two,
-        repo: settings.repo,
+        
       };
 
       console.log('Admin Settings - Submitting to server action:', payload);
@@ -335,12 +335,7 @@ export function AdminSettingsClient({ initialSettings }: AdminSettingsClientProp
                   <Input name="email" type="email" placeholder="contact@yoursite.com" value={settings.email || ''} onChange={handleChange} />
                   <p className="text-xs text-muted-foreground">Email address where contact form submissions will be sent</p>
                 </div>
-                {/* Repository URL */}
-                <div className="space-y-2 md:col-span-2">
-                  <label className="text-sm font-medium">Repository URL</label>
-                  <Input name="repo" type="text" placeholder="https://github.com/your-org/your-repo" value={settings.repo || ''} onChange={handleChange} />
-                  <p className="text-xs text-muted-foreground">URL of the GitHub repository to be used for deployment/forking</p>
-                </div>
+
               </div>
             </CardContent>
           </Card>

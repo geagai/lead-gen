@@ -5,11 +5,6 @@ import { createServerClient } from '@supabase/ssr'
 import { missingEnvVars } from '@/lib/checkEnv'
 
 export async function middleware(request: NextRequest) {
-  // Skip middleware completely if on /deploy-guide to prevent redirect loops
-  const isDeployGuide = request.nextUrl.pathname.startsWith('/deploy-guide');
-  if (isDeployGuide) {
-    return NextResponse.next();
-  }
 
   // Check if env vars are missing but don't redirect
   const missing = missingEnvVars();

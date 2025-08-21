@@ -51,7 +51,6 @@ export default async function RootLayout({
   const missing = missingEnvVars();
   const headersList = await headers();
   const path = headersList.get('x-invoke-path') || '';
-  const isDeployGuide = path.startsWith('/deploy-guide');
 
   let settings = null;
   let sessionData = null;
@@ -86,7 +85,7 @@ export default async function RootLayout({
     '--headline': hexToHsl('#3A72BB'),
   };
 
-  if (!missing.length && !isDeployGuide) {
+  if (!missing.length) {
     const cookieStore = await cookies();
     const supabase = createServerClient(cookieStore);
     if (supabase) {
