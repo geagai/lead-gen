@@ -47,19 +47,12 @@ export default function NavigationClient({ user, adminSettings, sticky = true, s
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <Code2 className="h-8 w-8 text-secondary" />
             <span className="font-bold text-xl text-primary">{siteName}</span>
           </Link>
           {/* Middle Navigation - Home, Pricing, and Admin links */}
           <div className="hidden md:flex justify-center items-center space-x-4">
             <Link href="/" className="text-link hover:text-link-hover font-medium transition-colors px-4">
               Home
-            </Link>
-
-
-
-            <Link href="/pricing" className="text-link hover:text-link-hover font-medium transition-colors px-4">
-              Pricing
             </Link>
             <Link href="/contact" className="text-link hover:text-link-hover font-medium transition-colors px-4">
               Contact
@@ -181,12 +174,6 @@ export default function NavigationClient({ user, adminSettings, sticky = true, s
           <div className="md:hidden py-4 space-y-4">
             <Link href="/" onClick={() => setIsOpen(false)} className="block text-link hover:text-link-hover font-medium transition-colors px-4 py-2">
               Home
-            </Link>
-
-
-
-            <Link href="/pricing" onClick={() => setIsOpen(false)} className="block text-link hover:text-link-hover font-medium transition-colors px-4 py-2">
-              Pricing
             </Link>
             <Link href="/settings" onClick={() => setIsOpen(false)} className="block text-link hover:text-link-hover font-medium transition-colors px-4 py-2">
               Settings
