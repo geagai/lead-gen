@@ -48,10 +48,14 @@ export function AuthProvider({ children, initialUser = null, initialSession = nu
         console.error('Error fetching user role:', error);
         return { ...sessionUser, role: 'user' };
       }
+      
+      // Type assertion to help TypeScript understand the data structure
+      const userData = data as { user_role: string | null } | null;
+      
       return {
         ...sessionUser,
         subscription: sessionUser.user_metadata?.subscription || null,
-        role: data?.user_role || 'user'
+        role: userData?.user_role || 'user'
       };
     } catch (err) {
       console.error('Error fetching user role:', err);

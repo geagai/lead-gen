@@ -25,8 +25,12 @@ export default async function Navigation({ sticky = true, siteName = 'Utility Ch
         .select('user_role')
         .eq('UID', baseUser.id)
         .single();
-      if (!userDataError && userData?.user_role) {
-        dbRole = userData.user_role;
+      
+      // Type assertion to help TypeScript understand the data structure
+      const typedUserData = userData as { user_role: string | null } | null;
+      
+      if (!userDataError && typedUserData?.user_role) {
+        dbRole = typedUserData.user_role;
       }
     } catch (err) {
       // ignore, fallback below
