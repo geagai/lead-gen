@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { ThemeToggle } from '@/components/theme-toggle'
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -57,6 +57,9 @@ export default function NavigationClient({ user, adminSettings, sticky = true, s
             <Link href="/about-rates" className="text-link hover:text-link-hover font-medium transition-colors px-4">
               Rates
             </Link>
+            <Link href="/contracts" className="text-link hover:text-link-hover font-medium transition-colors px-4">
+              Contracts
+            </Link>
             <Link href="/contact" className="text-link hover:text-link-hover font-medium transition-colors px-4">
               Contact
             </Link>
@@ -101,7 +104,6 @@ export default function NavigationClient({ user, adminSettings, sticky = true, s
           </div>
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <ThemeToggle />
             {user && (
               <>
                 <Link href="/dashboard">
@@ -162,7 +164,6 @@ export default function NavigationClient({ user, adminSettings, sticky = true, s
           </div>
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
-            <ThemeToggle />
             <Button
               variant="ghost"
               size="sm"
@@ -180,6 +181,9 @@ export default function NavigationClient({ user, adminSettings, sticky = true, s
             </Link>
             <Link href="/about-rates" onClick={() => setIsOpen(false)} className="block text-link hover:text-link-hover font-medium transition-colors px-4 py-2">
               Rates
+            </Link>
+            <Link href="/contracts" onClick={() => setIsOpen(false)} className="block text-link hover:text-link-hover font-medium transition-colors px-4 py-2">
+              Contracts
             </Link>
             <Link href="/settings" onClick={() => setIsOpen(false)} className="block text-link hover:text-link-hover font-medium transition-colors px-4 py-2">
               Settings
