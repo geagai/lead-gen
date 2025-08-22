@@ -31,13 +31,16 @@ export default async function TermsServicePage() {
     .limit(1)
     .maybeSingle()
 
+  // Type assertion to help TypeScript understand the data structure
+  const pageData = data as { terms_service: string | null } | null
+
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold text-center mb-8">Terms of Service</h1>
         <PageEditor 
           column="terms_service"
-          initialContent={data?.terms_service || null}
+          initialContent={pageData?.terms_service || null}
         />
       </div>
     </div>

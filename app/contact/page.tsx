@@ -31,6 +31,9 @@ export default async function ContactPage() {
     .limit(1)
     .maybeSingle()
 
+  // Type assertion to help TypeScript understand the data structure
+  const pageData = data as { contact_us: string | null } | null
+
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-4xl mx-auto">
@@ -38,7 +41,7 @@ export default async function ContactPage() {
         <div className="mb-8">
           <PageEditor 
             column="contact_us"
-            initialContent={data?.contact_us || null}
+            initialContent={pageData?.contact_us || null}
           />
         </div>
         <div className="mt-8">

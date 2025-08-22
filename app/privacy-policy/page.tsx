@@ -18,13 +18,16 @@ export default async function PrivacyPolicyPage() {
     .limit(1)
     .maybeSingle()
 
+  // Type assertion to help TypeScript understand the data structure
+  const pageData = data as { privacy_policy: string | null } | null
+
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold text-center mb-8">Privacy Policy</h1>
         <PageEditor 
           column="privacy_policy"
-          initialContent={data?.privacy_policy || null}
+          initialContent={pageData?.privacy_policy || null}
         />
       </div>
     </div>
