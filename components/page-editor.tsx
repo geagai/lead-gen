@@ -57,8 +57,11 @@ export function PageEditor({ column, initialContent, className }: PageEditorProp
     if (fetchError) {
       error = fetchError;
     } else if (existingRows && existingRows.length > 0) {
+      // Type assertion to help TypeScript understand the data structure
+      const typedExistingRows = existingRows as { id: string }[];
+      
       // Update the first row
-      const rowId = existingRows[0].id;
+      const rowId = typedExistingRows[0].id;
       const { error: updateError } = await supabase
         .from("pages")
         .update({ [column]: codeView ? html : content })
