@@ -54,6 +54,9 @@ export default function NavigationClient({ user, adminSettings, sticky = true, s
             <Link href="/" className="text-link hover:text-link-hover font-medium transition-colors px-4">
               Home
             </Link>
+            <Link href="/about-rates" className="text-link hover:text-link-hover font-medium transition-colors px-4">
+              Rates
+            </Link>
             <Link href="/contact" className="text-link hover:text-link-hover font-medium transition-colors px-4">
               Contact
             </Link>
@@ -174,6 +177,9 @@ export default function NavigationClient({ user, adminSettings, sticky = true, s
           <div className="md:hidden py-4 space-y-4">
             <Link href="/" onClick={() => setIsOpen(false)} className="block text-link hover:text-link-hover font-medium transition-colors px-4 py-2">
               Home
+            </Link>
+            <Link href="/about-rates" onClick={() => setIsOpen(false)} className="block text-link hover:text-link-hover font-medium transition-colors px-4 py-2">
+              Rates
             </Link>
             <Link href="/settings" onClick={() => setIsOpen(false)} className="block text-link hover:text-link-hover font-medium transition-colors px-4 py-2">
               Settings
