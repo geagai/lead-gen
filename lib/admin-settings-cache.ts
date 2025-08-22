@@ -167,13 +167,13 @@ class AdminSettingsCacheManager {
         return null;
       }
 
-      const settings = data as AdminSettingsCache;
+      const settings = data as AdminSettingsCache | null;
       
       // Update all caches
       this.memoryCache = settings;
       this.lastFetch = Date.now();
       
-      if (typeof window !== 'undefined') {
+      if (typeof window !== 'undefined' && settings) {
         this.saveToLocalStorage(settings);
         console.log('💾 Cache Updated: Saved admin settings to localStorage and memory cache');
       }
