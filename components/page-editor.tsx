@@ -62,16 +62,18 @@ export function PageEditor({ column, initialContent, className }: PageEditorProp
       
       // Update the first row
       const rowId = typedExistingRows[0].id;
+      const updateData = { [column]: codeView ? html : content } as { [key: string]: string };
       const { error: updateError } = await supabase
         .from("pages")
-        .update({ [column]: codeView ? html : content })
+        .update(updateData)
         .eq("id", rowId);
       error = updateError;
     } else {
       // Insert a new row
+      const insertData = { [column]: codeView ? html : content } as { [key: string]: string };
       const { error: insertError } = await supabase
         .from("pages")
-        .insert({ [column]: codeView ? html : content });
+        .insert(insertData);
       error = insertError;
     }
 
