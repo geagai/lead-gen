@@ -58,7 +58,7 @@ export default async function HomePage() {
               </div>
               <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
                 <Mail className="h-5 w-5 text-yellow-400" />
-                <span className="font-semibold">support@UtilityChoiceProgram.com</span>
+                <span className="font-semibold">support@utilitychoiceprogram.com</span>
               </div>
             </div>
             
@@ -102,7 +102,7 @@ export default async function HomePage() {
             </div>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="h-8 w-8 text-white" />
@@ -116,25 +116,31 @@ export default async function HomePage() {
                 <TrendingUp className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Business</h3>
-              <p className="text-gray-600">Comprehensive energy management for businesses of all sizes with cost optimization.</p>
+              <p className="text-gray-600 mb-6">Comprehensive energy management for businesses of all sizes with cost optimization.</p>
+              <Link href="/business">
+                <Button variant="outline" className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white">
+                  More Info
+                </Button>
+              </Link>
             </div>
             
             <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-violet-50 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">COMPANY</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Company</h3>
               <p className="text-gray-600">Trusted partner with years of experience in energy consulting and customer service.</p>
             </div>
           </div>
         </div>
       </section>
 
+
       {/* Featured Plans Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-6">
               Featured Utility Choice Plans
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
@@ -303,7 +309,7 @@ export default async function HomePage() {
             </div>
             <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
               <Mail className="h-5 w-5 text-yellow-400" />
-              <span className="font-semibold">support@UtilityChoiceProgram.com</span>
+              <span className="font-semibold">support@utilitychoiceprogram.com</span>
             </div>
           </div>
           
